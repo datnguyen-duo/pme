@@ -1,0 +1,22 @@
+@import url('https://use.typekit.net/dvz5xwv.css');
+
+/* Use this function if you need to import local fonts */
+@mixin include-font($family: arial, $weight: normal, $style: normal) {
+    $font-path: "../fonts/";
+
+    @font-face {
+        font-family: $family;
+        src: url('#{$font-path+$family}.woff2') format('woff2');
+        // If tou uncomment this line(.woff) make sure to replace ; with , line above
+        //url('#{$font-path+$family}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+$fonts: 'tiempos-headline-light';
+
+@each $font in $fonts {
+    @include include-font(#{$font});
+}

@@ -1,0 +1,44 @@
+// Breakpoints
+$desktop-l: "only screen and (min-width : 1920px)";
+$desktop-m: "only screen and (min-width : 1750px)";
+$desktop-s: "only screen and (min-width : 1600px)";
+
+$laptop-xl: "only screen and (min-width : 1400px)";
+$laptop-l: "only screen and (min-width : 1366px)";
+$laptop-m: "only screen and (min-width : 1280px)";
+$laptop-s: "only screen and (min-width : 1250px)";
+$laptop-xs: "only screen and (min-width : 1190px)";
+
+$tablet-xl: "only screen and (min-width : 1100px)";
+$tablet-l: "only screen and (min-width : 1024px)";
+$tablet-m: "only screen and (min-width : 850px)";
+$tablet-s: "only screen and (min-width : 768px)";
+$tablet-xs: "only screen and (min-width : 650px)";
+
+$mobile-xl: "only screen and (min-width : 550px)";
+$mobile-l: "only screen and (min-width : 450px)";
+$mobile-s: "only screen and (min-width : 400px)";
+$mobile-xs: "only screen and (min-width : 340px)";
+
+$hover: "(hover: hover) and (min-width: 768px)";
+
+$header: $laptop-xs;
+
+// Fonts
+$font-light: 'tiempos-headline-light', sans-serif;
+
+// Colors
+$black: #000;
+$white: #fff;
+
+$blue: #3E5C6C;
+$orange: #ECC59B;
+$tan: #F9F5F2;
+
+// Other
+$design-size: 1920px;
+
+$desktop-header-height: 74px;
+$mobile-header-height: 50px;
+
+$img-scale-on-hover: scale(1.04);

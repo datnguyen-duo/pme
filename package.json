@@ -1,0 +1,29 @@
+{
+  "name": "pme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "preview": "npm-run-all --parallel sync start",
+    "sync": "browser-sync start -p 'dev.pme.com' --files '**/*.php' 'build/*.js' 'build/*.css'",
+    "build": "wp-scripts build src/scripts/main.js",
+    "start": "wp-scripts start src/scripts/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.0.0",
+    "browser-sync": "^2.29.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "aos": "^2.3.4",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "swiper": "^10.3.1"
+  }
+}

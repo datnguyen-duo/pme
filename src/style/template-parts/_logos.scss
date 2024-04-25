@@ -1,0 +1,41 @@
+.template-part-logos {
+    border-top: solid 1px $blue;
+    padding: 80px 0;
+    box-sizing: border-box;
+
+    @media #{$tablet-s} {
+        padding: clamp(100px, px-to-vw(119), 119px) 0 clamp(100px, px-to-vw(146), 146px);
+    }
+
+    .content {
+        .title {
+            @include title-2();
+            margin-bottom: clamp(40px, px-to-vw(55), 55px);
+            text-align: center;
+        }
+
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -20px;
+
+            .logo-holder {
+                margin: 0 clamp(15px, px-to-vw(50), 50px) 20px;
+
+                img {
+                    width: auto;
+                    max-width: 100px;
+                    max-height: 45px;
+                    height: auto;
+
+                    @media #{$tablet-l} {
+                        max-width: clamp(150px, px-to-vw(202), 202px);
+                        max-height: clamp(60px, px-to-vw(90), 90px);
+                    }
+                }
+            }
+        }
+    }
+}

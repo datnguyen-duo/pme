@@ -1,0 +1,208 @@
+.template-contract-page-container {
+    padding-top: $mobile-header-height;
+
+    @media #{$header} {
+        padding-top: $desktop-header-height;
+    }
+
+    .hero-section {
+        @include background-loader($type:'blue');
+        background-color: $blue;
+        position: relative;
+        z-index: 1;
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+                @include cropped-img();
+            }
+        }
+
+        .content {
+            @include wrapper();
+            min-height: px-to-vw(720, 430);
+            position: relative;
+            z-index: 2;
+            padding: 0 20px 25px;
+            box-sizing: border-box;
+            display: flex;
+
+            @media #{$tablet-s} {
+                min-height: max(45.6vw, 600px);
+                padding: 0 25px clamp(25px, px-to-vw(114), 114px) clamp(25px, px-to-vw(120), 120px);
+                align-items: flex-end;
+            }
+
+            .group {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                @media #{$tablet-s} {
+                    display: block;
+                    height: auto;
+                }
+
+                .title {
+                    @include title-1($color: #fff);
+                    margin: auto auto 0;
+
+                    @media #{$tablet-s} {
+                        margin-bottom: clamp(25px, px-to-vw(45), 45px);
+                    }
+                }
+
+                .border {
+                    margin-top: auto;
+                    display: block;
+                    height: 1px;
+                    background-color: #fff;
+                    margin-bottom: clamp(45px, px-to-vw(60), 60px);
+                    max-width: 550px;
+                }
+
+                .list {
+                    display: flex;
+                    //flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    @media #{$mobile-xl} {
+                        justify-content: flex-start;
+                    }
+
+                    .item {
+                        margin-right: 10px;
+
+                        @media #{$mobile-xl} {
+                            margin-right: clamp(30px, px-to-vw(60), 60px);
+                        }
+
+                        .item-title {
+                            @include title-2($color: #fff);
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .blocks-section {
+        .content {
+            .blocks {
+                .block-holder {
+                    &:nth-child(even) {
+                        background-color: #B3CDC0;
+                    }
+
+                    .block {
+                        @include wrapper();
+                        padding: clamp(80px, px-to-vw(100), 100px) clamp(25px, px-to-vw(180), 180px) clamp(45px, px-to-vw(100), 100px) clamp(25px, px-to-vw(120), 120px);
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .block-col {
+                            box-sizing: border-box;
+
+                            &:nth-child(1) {
+                                width: 100%;
+                                margin-bottom: 65px;
+                                text-align: center;
+
+                                @media #{$tablet-s} {
+                                    text-align: left;
+                                    margin-bottom: 90px;
+                                }
+
+                                @media #{$tablet-l} {
+                                    width: 58.8%;
+                                    padding-right: 60px;
+                                }
+
+                                .block-col-content {
+                                    @media #{$tablet-s} {
+                                        position: sticky;
+                                        top: 0;
+                                        padding-top: $mobile-header-height;
+                                        margin-top: -$mobile-header-height;
+                                    }
+
+                                    @media #{$header} {
+                                        padding-top: $desktop-header-height;
+                                        margin-top: -$desktop-header-height;
+                                    }
+                                }
+
+                                .block-title {
+                                    @include title-3();
+                                    margin-bottom: 15px;
+                                    max-width: 600px;
+                                    width: 100%;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                width: 100%;
+
+                                @media #{$tablet-l} {
+                                    width: 41.2%;
+                                }
+
+                                .gl-text-editor {
+                                    h1,
+                                    h2,
+                                    h3,
+                                    h4,
+                                    h5,
+                                    h6 {
+                                        @include title-2();
+                                    }
+                                }
+
+                                .banner {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    background-color: #fff;
+                                    padding: clamp(30px, px-to-vw(35), 35px) clamp(30px, px-to-vw(45), 45px);
+                                    box-sizing: border-box;
+                                    margin-top: 50px;
+
+                                    .banner-col {
+                                        &:nth-child(1) {
+                                            width: 100%;
+                                            margin-bottom: 20px;
+
+                                            @media #{$laptop-s} {
+                                                width: 50%;
+                                                margin-bottom: 0;
+                                            }
+
+                                            .banner-title {
+                                                @include title-2();
+                                            }
+                                        }
+
+                                        &:nth-child(2) {
+                                            width: 100%;
+
+                                            @media #{$laptop-s} {
+                                                width: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

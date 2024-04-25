@@ -1,0 +1,4 @@
+@function px-to-vw( $pixels: 50, $breakpoint: 1920 ) {
+    $result: calc( ( $pixels / $breakpoint ) * 100vw );
+    @return $result;
+}

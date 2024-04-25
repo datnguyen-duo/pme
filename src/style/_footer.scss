@@ -1,0 +1,439 @@
+#site-footer {
+    background-color: #3E5C6C;
+    overflow: hidden;
+
+    .content {
+        .row {
+            &:nth-child(1) {
+                .row-content {
+                    @include wrapper();
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .col {
+                        box-sizing: border-box;
+
+                        &:nth-child(1) {
+                            width: 100%;
+                            padding: 65px 0 0;
+                            box-sizing: border-box;
+                            display: flex;
+                            flex-direction: column;
+
+                            @media #{$tablet-s} {
+                                padding: clamp(100px, px-to-vw(150), 150px) 0 0;
+                                width: 70%;
+                            }
+
+                            .inner-row {
+                                padding: 0 25px 55px;
+                                box-sizing: border-box;
+
+                                @media #{$tablet-s} {
+                                    padding-bottom: 120px;
+                                }
+
+                                &:nth-child(1) {
+                                    .form-container {
+                                        max-width: 705px;
+                                        width: 100%;
+                                        margin: 0 auto;
+
+                                        .form-title {
+                                            @include title-3($color: #fff);
+                                            text-align: center;
+                                            margin-bottom: clamp(20px, px-to-vw(45), 45px);
+                                        }
+
+                                        .form-holder {
+                                            form {
+                                                &.submitting {
+                                                    opacity: 0.8;
+
+                                                    .submit-holder {
+                                                        .gl-loader-holder {
+                                                            visibility: visible;
+                                                            opacity: 1;
+                                                        }
+                                                    }
+                                                }
+
+                                                .fields-holder-2-col {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+
+                                                    .field-holder {
+                                                        box-sizing: border-box;
+
+                                                        &:nth-child(odd) {
+                                                            width: 100%;
+
+                                                            @media #{$tablet-s} {
+                                                                width: 50%;
+                                                                padding-right: 8px;
+                                                            }
+                                                        }
+
+                                                        &:nth-child(even) {
+                                                            width: 100%;
+
+                                                            @media #{$tablet-s} {
+                                                                width: 50%;
+                                                                padding-left: 8px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                .field-holder {
+                                                    margin-bottom: 8px;
+
+                                                    @media #{$tablet-s} {
+                                                        margin-bottom: 15px;
+                                                    }
+
+                                                    input,
+                                                    textarea {
+                                                        @include text-1($color: #fff);
+                                                        border: solid 1px #fff;
+                                                        border-radius: 5px;
+                                                        height: 40px;
+                                                        padding: 0 10px;
+                                                        box-sizing: border-box;
+                                                        background-color: transparent;
+                                                        width: 100%;
+                                                        outline: none;
+
+                                                        @media #{$tablet-s} {
+                                                            height: 45px;
+                                                            padding: 0 17px;
+                                                        }
+
+                                                        &::placeholder {
+                                                            color: inherit;
+                                                        }
+
+                                                        &:focus {
+                                                            border-color: $orange;
+                                                        }
+                                                    }
+
+                                                    textarea {
+                                                        padding: 10px;
+                                                        height: 130px;
+                                                        resize: none;
+
+                                                        @media #{$tablet-s} {
+                                                            padding: 17px;
+                                                            height: 170px;
+                                                        }
+                                                    }
+                                                }
+
+                                                .submit-holder {
+                                                    text-align: center;
+                                                    margin-top: 8px;
+                                                    position: relative;
+
+                                                    @media #{$tablet-s} {
+                                                        margin-top: 20px;
+                                                    }
+
+                                                    .gl-loader-holder {
+                                                        @include transition();
+                                                        visibility: hidden;
+                                                        opacity: 0;
+                                                        position: absolute;
+                                                        bottom: 0;
+                                                        left: 50%;
+                                                        transform: translate(-50%, calc(100% + 10px));
+                                                    }
+
+                                                    .gl-button {
+                                                        width: 100%;
+
+                                                        @media #{$tablet-s} {
+                                                            width: auto;
+                                                        }
+                                                    }
+                                                }
+
+                                                .wpcf7-not-valid-tip {
+                                                    font-family: "owners-text", sans-serif;
+                                                    font-size: 14px;
+                                                    color: $orange;
+                                                    line-height: 1.27;
+                                                    display: block;
+                                                    margin-top: 5px;
+                                                }
+
+                                                .wpcf7-response-output {
+                                                    @include text-1($color: $orange);
+                                                    padding: 0;
+                                                    border: none;
+                                                    margin: 40px 0 0;
+                                                    text-align: center;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    position: relative;
+                                    margin-top: auto;
+                                    padding: clamp(50px, px-to-vw(55), 55px) 25px;
+
+                                    @media #{$laptop-s} {
+                                        padding-left: clamp(80px, px-to-vw(126), 126px);
+                                    }
+
+                                    &:before {
+                                        content: "";
+                                        display: block;
+                                        width: 100vw;
+                                        height: 1px;
+                                        background-color: #fff;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                    }
+
+                                    .info-list {
+                                        max-width: 977px;
+                                        width: 100%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: space-between;
+                                        box-sizing: border-box;
+
+                                        @media #{$tablet-s} {
+                                            flex-wrap: nowrap;
+                                        }
+
+                                        .list-item {
+                                            width: 100%;
+                                            margin-bottom: 20px;
+
+                                            @media #{$tablet-s} {
+                                                width: auto;
+                                                margin-bottom: 0;
+                                            }
+
+                                            &:last-child {
+                                                margin-bottom: 0;
+                                            }
+
+                                            &.list-item--address {
+                                                max-width: 180px;
+
+                                                @media #{$tablet-l} {
+                                                    max-width: 100%;
+                                                }
+                                            }
+
+                                            .list-item-title {
+                                                @include title-2($color: #fff);
+                                                margin-bottom: 11px;
+                                            }
+
+                                            .list-item-text {
+                                                @include text-1($color: #fff);
+
+                                                a {
+                                                    @include transition();
+                                                    color: inherit;
+
+                                                    &:hover {
+                                                        color: $orange;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            width: 100%;
+                            padding: 45px 25px 35px;
+                            display: flex;
+                            flex-direction: column;
+                            border-top: solid 1px #fff;
+
+                            @media #{$tablet-s} {
+                                padding: clamp(100px, px-to-vw(162), 162px) 25px clamp(35px, px-to-vw(67), 67px);
+                                width: 30%;
+                                border-top: none;
+                                border-left: solid 1px #fff;
+                            }
+
+                            @media #{$laptop-l} {
+                                padding-left: 50px;
+                            }
+
+                            @media #{$laptop-s} {
+                                padding-left: clamp(25px, px-to-vw(184), 184px);
+                            }
+
+                            nav {
+                                margin-bottom: clamp(80px, px-to-vw(140), 140px);
+
+                                .menu {
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    @media #{$tablet-s} {
+                                        display: block;
+                                    }
+
+                                    > li {
+                                        width: 50%;
+                                        margin-bottom: 53px;
+
+                                        @media #{$tablet-s} {
+                                            width: 100%;
+                                        }
+
+                                        &.menu-item-has-children {
+
+                                        }
+
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+
+                                        > a {
+                                            @include title-2($color: #fff);
+                                        }
+
+                                        .sub-menu {
+                                            margin-top: 11px;
+
+                                            li {
+                                                a {
+                                                    @include transition();
+                                                    @include text-1($color: #fff);
+
+                                                    &:hover {
+                                                        color: $orange;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .social-media-holder {
+                                margin-top: auto;
+
+                                .social-media-title {
+                                    @include title-2($color: #fff);
+                                    margin-bottom: 11px;
+                                }
+
+                                .social-media {
+                                    display: flex;
+
+                                    li {
+                                        margin-right: 22px;
+
+                                        &:last-child {
+                                            margin-right: 0;
+                                        }
+
+                                        a {
+                                            @include transition();
+                                            width: 30px;
+                                            height: 30px;
+                                            border-radius: 45px;
+                                            background-color: #fff;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                            @media #{$tablet-xs} {
+                                                width: 38px;
+                                                height: 38px;
+                                            }
+
+                                            @media #{$tablet-l} {
+                                                width: 45px;
+                                                height: 45px;
+                                            }
+
+                                            &:hover {
+                                                background-color: $orange;
+                                            }
+
+                                            img {
+                                                max-width: 15px;
+                                                max-height: 17px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                border-top: solid 1px #fff;
+
+                .row-content {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 1920px;
+                    margin: auto;
+                    padding: 25px;
+                    box-sizing: border-box;
+
+                    @media #{$tablet-s} {
+                        padding: 32px 25px;
+                    }
+
+                    @media #{$laptop-s} {
+                        padding: 32px clamp(25px, px-to-vw(126), 126px);
+                    }
+
+                    .col {
+                        nav {
+                            .menu {
+                                display: flex;
+
+                                li {
+                                    margin-right: 20px;
+
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+
+                                    a {
+                                        @include transition();
+                                        @include text-1($color: #fff);
+
+                                        &:hover {
+                                            color: $orange;
+                                        }
+                                    }
+
+                                    .sub-menu {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .copyright {
+                            @include text-1($color: #fff);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

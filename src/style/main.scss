@@ -1,0 +1,404 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+// Global styles
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: $tan;
+
+    // If user is logged in and admin bar is visible make header visible
+    &.admin-bar {
+        #site-header {
+            padding-top: 46px;
+
+            @media only screen and (min-width: 783px) {
+                padding-top: 32px;
+            }
+         }
+    }
+
+    * {
+        font-weight: normal;
+    }
+}
+
+// General style for a link
+a {
+    color: inherit;
+    font-weight: inherit;
+}
+
+// Global classes
+.no-scroll {
+    overflow: hidden;
+}
+
+// Global page holder
+#site-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// Global text editor
+.gl-text-editor {
+    * {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    li,
+    p {
+        @include text-1();
+
+        strong {
+            font-weight: 500;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    hr {
+        border: solid 1px $blue;
+        margin: 35px 0;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    ol {
+        list-style: decimal;
+        padding-left: 20px;
+    }
+
+    ol,
+    ul {
+        li {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: bottom;
+    }
+}
+
+.gl-button {
+    @include transition(all, 200ms);
+    font-family: "owners-text", sans-serif;
+    font-size: 14px;
+    color: $blue;
+    letter-spacing: -0.01em;
+
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    //padding: 24px 32px;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    position: relative;
+    min-width: 180px;
+    min-height: 40px;
+
+    @media #{$tablet-s} {
+        font-size: 16px;
+        min-width: clamp(200px, px-to-vw(225), 225px);
+        //min-height: clamp(40px, px-to-vw(45), 45px);
+        min-height: 45px;
+    }
+
+    @media #{$hover} {
+        &:hover {
+            background-color: darken(#fff, 5%);
+            color: $blue;
+        }
+    }
+
+    &--blue {
+        background-color: $blue;
+        color: #fff;
+        @media #{$hover} {
+            &:hover {
+                background-color: darken($blue, 5%);
+                color: #fff;
+            }
+        }
+    }
+
+    &--orange {
+        background-color: $orange;
+        color: $blue;
+
+        @media #{$hover} {
+            &:hover {
+                background-color: darken($orange, 5%);
+                color: $blue;
+            }
+        }
+    }
+
+    &--small {
+        min-width: 155px;
+        font-size: 14px;
+    }
+}
+
+// Slider pagination - default
+.gl-slider-pagination {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    .swiper-pagination-bullet {
+        width: 40px;
+        height: 1px;
+        border-radius: 0;
+        background-color: rgba($blue, 25%);
+
+        @media #{$tablet-l} {
+            width: 54px;
+        }
+
+        &.swiper-pagination-bullet-active {
+            background-color: $blue;
+        }
+    }
+}
+
+// Slider pagination - progressbar
+.gl-slider-pagination-progressbar {
+    height: 1px !important;
+    position: relative !important;
+    background-color: rgba($blue, 25%) !important;
+
+    .swiper-pagination-progressbar-fill {
+        background-color: $blue !important;
+    }
+}
+
+// Slider controls - columns
+.gl-slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--col {
+
+    }
+
+    &--col-middle {
+        margin: 0 40px;
+        width: 100%;
+    }
+}
+
+.gl-slider-button {
+    @include transition();
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: solid 1px rgba($blue, 25%);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    background-color: $tan;
+    opacity: 1;
+
+    @media #{$tablet-s} {
+        width: clamp(40px, px-to-vw(50), 50px);
+        height: clamp(40px, px-to-vw(50), 50px);
+    }
+
+    &:not(.swiper-button-disabled) {
+        @media #{$hover} {
+            &:hover {
+                background-color: darken($tan, 5%);
+                border-color: transparent;
+            }
+        }
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.5;
+        background-color: transparent !important;
+    }
+
+    img {
+        width: 12px;
+        vertical-align: bottom;
+    }
+}
+
+.gl-link {
+    font-family: "owners-text", sans-serif;
+    font-size: 14px;
+    color: $blue;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    @media #{$tablet-s} {
+        font-size: 16px;
+    }
+
+    @media #{$hover} {
+        &:hover {
+            &:after {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    &:after {
+        @include transition();
+        position: relative;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-image: url("/src/images/icons/arrow-right-blue.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 2px;
+    }
+
+    &--white {
+        color: #fff;
+
+        &:after {
+            background-image: url("/src/images/icons/arrow-right-white.svg");
+        }
+    }
+}
+
+// Spinner / Loader
+.gl-loader-holder {
+    .loader {
+        border: 3px solid #fff;
+        border-radius: 50%;
+        border-top: 3px solid $orange;
+        width: 18px;
+        height: 18px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+    }
+}
+
+// Modal - modal content is styled on specific template. This is just a skeleton
+.gl-modal {
+    background-color: #CAD4E8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: none;
+
+    &--content {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    &--close-btn {
+        @include transition();
+        width: 30px;
+        height: 30px;
+        border-radius: 40px;
+        background-color: $tan;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 5;
+
+        @media #{$tablet-s} {
+            width: 40px;
+            height: 40px;
+        }
+
+        @media #{$hover} {
+            &:hover {
+                background-color: darken($tan, 5%);
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 17px;
+            height: 17px;
+            background-image: url("/src/images/icons/times-blue.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+// Basic
+@import "fonts";
+@import "reset";
+
+// Other
+//@import "animations";
+
+// Header & Footer
+@import "header";
+@import "footer";
+
+// Template parts - PARTS
+@import "template-parts/accordions";
+
+// Template parts - SECTIONS
+@import "template-parts/logos";
+
+// Default pages
+@import "front-page";
+@import "404";
+
+// Singles
+//@import "single";
+
+// Templates
+@import "templates/about";
+@import "templates/careers";
+@import "templates/press";
+@import "templates/contract";
+@import "templates/partner-with-us";
+@import "templates/service";
+
+// Node Modules
+@import 'aos/dist/aos.css';
+@import "node_modules/swiper/swiper-bundle.min";
+@import "node_modules/@splidejs/splide/dist/css/splide.min";
