@@ -1,69 +1,71 @@
-import "/src/style/main.scss"
-import AOS from 'aos';
+import "/src/style/main.scss";
+import AOS from "aos";
 
 $(document).ready(function () {
-    setTimeout(() => {
-        AOS.init({
-            offset: 150,
-            duration: 1000,
-            delay: 150,
-            once: true,
-        })
-    }, 120);
+  setTimeout(() => {
+    AOS.init({
+      offset: 150,
+      duration: 1000,
+      delay: 150,
+      once: true,
+    });
+  }, 120);
 });
-
 
 // Other
 // import "./helpers"
 
 // Modules
 import TestimonialsSlider from "./modules/testimonial-slider";
-TestimonialsSlider().init()
+TestimonialsSlider().init();
 
 import HistorySlider from "./modules/history-slider";
-HistorySlider().init()
+HistorySlider().init();
 
 import Slider from "./modules/slider";
-Slider().init()
+Slider().init();
 
 import GallerySlider from "./modules/gallery-slider";
-GallerySlider().init()
+GallerySlider().init();
 
 import Cf7Form from "./modules/cf7-form";
-Cf7Form().init()
+Cf7Form().init();
 
 import HtmlVideo from "./modules/html-video";
-HtmlVideo().init()
+HtmlVideo().init();
 
 import Accordions from "./modules/accordions";
-Accordions().init()
+Accordions().init();
 
 import SiteHeader from "./modules/site-header";
-SiteHeader().init()
+SiteHeader().init();
 
 import SiteNavMobile from "./modules/site-nav-mobile";
-SiteNavMobile().init()
+SiteNavMobile().init();
 
 import AnimationMoveLeftRight from "./modules/animation-move-element-left-right";
-AnimationMoveLeftRight().init()
+AnimationMoveLeftRight().init();
 
 import AnimationMoveZoomInImage from "./modules/animation-zoom-in-image";
-AnimationMoveZoomInImage().init()
+AnimationMoveZoomInImage().init();
 
 import Counter from "./modules/counter";
-Counter().init()
+Counter().init();
 
 import Modal from "./modules/modal";
-Modal().init()
+Modal().init();
 
 import AnimationParallax from "./modules/animation-parallax";
-AnimationParallax().init()
+AnimationParallax().init();
 
 import CardsSlider from "./modules/cards-slider";
-CardsSlider().init()
+CardsSlider().init();
 
 import ListSlider from "./modules/list-slider";
-ListSlider().init()
+ListSlider().init();
+
+import Map from "./modules/map";
+Map().init();
 
 // Templates
 

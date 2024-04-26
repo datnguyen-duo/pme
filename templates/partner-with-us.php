@@ -98,6 +98,31 @@ get_header(); ?>
 
     <?php get_template_part('template-parts/logos'); ?>
 
+    <?php $map_s = get_field('map'); 
+    if( $map_s['center_point']['name'] ): ?>
+    <div class="map">
+        <div class="map__container">
+            <div id="map-sidebar">
+                <div id="map-sidebar-title">
+                    <?php echo $map_s['title']; ?>
+                </div>
+                <div id="map-items-container">
+                <div id="map-items"></div>
+                </div>
+            </div>
+            <div id="map">
+                <div id="map-popup">
+                    <h3 id="map-popup-title"></h3>
+                    <p id="map-popup-type-1"></p>
+                    <p id="map-popup-type-2"></p>
+                    <p id="map-popup-expiration-1"></p>
+                    <p id="map-popup-expiration-2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+
     <?php $desc_s = get_field('description_section');
     if( $desc_s['image'] || $desc_s['image_2'] || $desc_s['title'] || $desc_s['description'] ): ?>
         <section class="description-section">
