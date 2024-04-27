@@ -137,7 +137,7 @@ $copyright = get_field('copyright', 'option');
 
                 <div class="col">
                     <?php if( $copyright ): ?>
-                        <p class="copyright"><?= $copyright ?></p>
+                        <p class="copyright">©<?= date('Y') ?> <?= $copyright ?></p>
                     <?php endif; ?>
                 </div>
             </div>
