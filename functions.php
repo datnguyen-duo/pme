@@ -55,7 +55,7 @@ function site_scripts() {
     wp_localize_script('main-js-file','site_data',array(
         'site_url' => site_url(),
         'theme_url' => get_template_directory_uri(),
-        'access_token' => 'pk.eyJ1IjoiZHVvc3R1ZGlvIiwiYSI6ImNsdjc0cnNkdjA2Y2Yyam8ybHMxdGI3MzcifQ.nXyLj636H-QJ1XJz0w7uRA',
+        'access_token' => 'pk.eyJ1IjoiZHVvc3R1ZGlvIiwiYSI6ImNsdmg0M3dkOTBuOXgybGtoeDJvZ3hnODUifQ.BNiMZk-1M5d2AJ8CAzv_Ng',
         'map' => get_field('map'),
     ));
 }

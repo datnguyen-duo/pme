@@ -299,10 +299,23 @@
     #map-sidebar {
       border-right: 1px solid $blue;
       padding: 2rem;
+      height: calc(800px - 8rem);
+      @media screen and (max-width: 768px) {
+        height: 400px;
+      }
       #map-sidebar-title {
         @include title-3();
         text-align: center;
         margin-bottom: 1rem;
+      }
+      #map-items-container {
+        height: 100%;
+        overflow: auto;
+        padding-right: 1rem;
+
+        @media screen and (max-width: 768px) {
+          height: 90%;
+        }
       }
       .map-button-container {
         border-bottom: 1px solid $blue;

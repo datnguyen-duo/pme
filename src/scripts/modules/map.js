@@ -66,7 +66,6 @@ export default () => {
     map.on("load", function () {
       map.loadImage(pin, (error, image) => {
         if (error) {
-          console.log(error);
           throw error;
         }
         map.addImage("pin", image);
@@ -104,7 +103,7 @@ export default () => {
             if (firstButton) {
               firstButton.click();
             }
-          }, 5);
+          }, 500);
         }
         map.addLayer(
           {
@@ -118,10 +117,10 @@ export default () => {
               "text-font": ["Arial Unicode MS Bold"],
               "text-offset": [0, -0.05],
               "text-size": 12,
-              "text-allow-overlap": true,
-              "text-ignore-placement": true,
-              "icon-allow-overlap": true,
-              "icon-ignore-placement": true,
+              // "text-allow-overlap": true,
+              // "text-ignore-placement": true,
+              // "icon-allow-overlap": true,
+              // "icon-ignore-placement": true,
             },
             paint: {
               "text-color": "#ffffff",
@@ -178,10 +177,10 @@ export default () => {
             "text-font": ["Arial Unicode MS Bold"],
             "text-offset": [0, -0.05],
             "text-size": 12,
-            "text-allow-overlap": true,
-            "text-ignore-placement": true,
-            "icon-allow-overlap": true,
-            "icon-ignore-placement": true,
+            // "text-allow-overlap": true,
+            // "text-ignore-placement": true,
+            // "icon-allow-overlap": true,
+            // "icon-ignore-placement": true,
           },
           paint: {
             "text-color": "#ffffff",
@@ -208,7 +207,6 @@ export default () => {
     };
 
     const highlightItem = (id, label) => {
-      console.log(id, label);
       const highlighted = map.getSource("location-highlighted");
       const text = map.getSource("location-highlighted-number");
 

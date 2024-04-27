@@ -432,19 +432,19 @@ a {
 }
 #site-header {
   transition: all 350ms ease 0ms;
-  background-color: #F9F5F2;
+  background-color: #f9f5f2;
   position: fixed;
-  z-index: 10;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
   /**
-   If header is transparent-light
-  **/
+     If header is transparent-light
+    **/
   /**
-   If header is transparent-light at start/page load END
-  **/
+     If header is transparent-light at start/page load END
+    **/
 }
 @media only screen and (min-width : 1190px) {
   #site-header {
@@ -470,7 +470,7 @@ a {
   background-color: #fff;
 }
 #site-header.transparent-light:not(.nav-is-active).scrolled {
-  background-color: #F9F5F2;
+  background-color: #f9f5f2;
 }
 #site-header.transparent-light:not(.nav-is-active).scrolled .content .col nav .menu > li.menu-item-has-children > a:after {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgOCA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZD0iTTEgMUw0IDRMNyAxIiBzdHJva2U9IiMzRTVDNkMiLz4NCjwvc3ZnPg0K);
@@ -557,7 +557,7 @@ a {
   position: relative;
 }
 #site-header .content .col.col-middle nav .menu > li:hover {
-  background-color: #EFE8E2;
+  background-color: #efe8e2;
 }
 #site-header .content .col.col-middle nav .menu > li.current-menu-item > a {
   font-weight: 500;
@@ -616,7 +616,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #F9F5F2;
+  background-color: #f9f5f2;
   z-index: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -725,7 +725,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9;
+  z-index: 999;
   background-color: #3E5C6C;
 }
 @media only screen and (min-width : 1190px) {
@@ -4876,6 +4876,12 @@ a {
 .template-partner-with-us-page-container .map #map-sidebar {
   border-right: 1px solid #3E5C6C;
   padding: 2rem;
+  height: calc(800px - 8rem);
+}
+@media screen and (max-width: 768px) {
+  .template-partner-with-us-page-container .map #map-sidebar {
+    height: 400px;
+  }
 }
 .template-partner-with-us-page-container .map #map-sidebar #map-sidebar-title {
   font-family: "tiempos-headline-light", sans-serif;
@@ -4888,6 +4894,16 @@ a {
 @media only screen and (min-width : 768px) {
   .template-partner-with-us-page-container .map #map-sidebar #map-sidebar-title {
     font-size: clamp(26px, 1.875vw, 36px);
+  }
+}
+.template-partner-with-us-page-container .map #map-sidebar #map-items-container {
+  height: 100%;
+  overflow: auto;
+  padding-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .template-partner-with-us-page-container .map #map-sidebar #map-items-container {
+    height: 90%;
   }
 }
 .template-partner-with-us-page-container .map #map-sidebar .map-button-container {
