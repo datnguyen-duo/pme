@@ -183,7 +183,7 @@ export default () => {
             // "icon-ignore-placement": true,
           },
           paint: {
-            "text-color": "#ffffff",
+            "text-color": "#3E5C6C",
           },
         });
       });
