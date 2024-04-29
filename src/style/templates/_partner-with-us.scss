@@ -495,7 +495,11 @@
 
                         .title {
                             @include title-1();
-                            margin-bottom: 30px;
+                            margin-bottom: 10px;
+
+                            @media #{$tablet-s} {
+                                margin-bottom: 25px;
+                            }
                         }
 
                         .description {

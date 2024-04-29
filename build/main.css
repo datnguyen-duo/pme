@@ -5121,11 +5121,16 @@ a {
   font-family: "tiempos-headline-light", sans-serif;
   color: #3E5C6C;
   font-size: 46px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 @media only screen and (min-width : 768px) {
   .template-partner-with-us-page-container .description-section .content .col:nth-child(2) .col-content .title {
     font-size: clamp(56px, 5.7291666667vw, 110px);
+  }
+}
+@media only screen and (min-width : 768px) {
+  .template-partner-with-us-page-container .description-section .content .col:nth-child(2) .col-content .title {
+    margin-bottom: 25px;
   }
 }
 .template-partner-with-us-page-container .description-section .content .col:nth-child(2) .col-content .description p {
