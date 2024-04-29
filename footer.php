@@ -67,7 +67,7 @@ $copyright = get_field('copyright', 'option');
                                     $link_title = $link['title'];
                                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>
                                     <p class="list-item-text">
-                                        <a href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
+                                        <a class="underline" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
                                             <?= esc_html( $link_title ); ?>
                                         </a>
                                     </p>

@@ -1097,6 +1097,10 @@ a {
   transition: all 350ms ease 0ms;
   color: inherit;
 }
+#site-footer .content .row:nth-child(1) .row-content .col:nth-child(1) .inner-row:nth-child(2) .info-list .list-item .list-item-text a.underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 #site-footer .content .row:nth-child(1) .row-content .col:nth-child(1) .inner-row:nth-child(2) .info-list .list-item .list-item-text a:hover {
   color: #ECC59B;
 }

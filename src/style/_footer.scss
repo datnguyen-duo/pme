@@ -244,6 +244,11 @@
                                                     @include transition();
                                                     color: inherit;
 
+                                                    &.underline {
+                                                        text-decoration: underline;
+                                                        text-underline-offset: 2px;
+                                                    }
+
                                                     &:hover {
                                                         color: $orange;
                                                     }
