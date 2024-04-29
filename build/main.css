@@ -1452,17 +1452,32 @@ a {
   justify-content: center;
   margin-bottom: -20px;
 }
-.template-part-logos .content .logos .logo-holder {
-  margin: 0 clamp(15px, 2.6041666667vw, 50px) 20px;
+.template-part-logos .content .logos.more-than-7 .logo-holder {
+  margin: 0 clamp(15px, 1.9791666667vw, 38px) 20px;
 }
-.template-part-logos .content .logos .logo-holder img {
+.template-part-logos .content .logos.more-than-7 .logo-holder img {
   width: auto;
   max-width: 100px;
   max-height: 45px;
   height: auto;
 }
 @media only screen and (min-width : 1024px) {
-  .template-part-logos .content .logos .logo-holder img {
+  .template-part-logos .content .logos.more-than-7 .logo-holder img {
+    max-width: clamp(130px, 9.375vw, 180px);
+    max-height: clamp(50px, 3.90625vw, 75px);
+  }
+}
+.template-part-logos .content .logos:not(.more-than-7) .logo-holder {
+  margin: 0 clamp(15px, 2.6041666667vw, 50px) 20px;
+}
+.template-part-logos .content .logos:not(.more-than-7) .logo-holder img {
+  width: auto;
+  max-width: 100px;
+  max-height: 45px;
+  height: auto;
+}
+@media only screen and (min-width : 1024px) {
+  .template-part-logos .content .logos:not(.more-than-7) .logo-holder img {
     max-width: clamp(150px, 10.5208333333vw, 202px);
     max-height: clamp(60px, 4.6875vw, 90px);
   }

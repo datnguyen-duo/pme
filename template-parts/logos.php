@@ -9,7 +9,7 @@ if( $logos_s['title'] || $logos_s['logos'] ): ?>
             <?php endif; ?>
 
             <?php if( $logos_s['logos'] ): ?>
-                <div class="logos">
+                <div class="logos <?= (sizeof($logos_s['logos']) > 7) ? 'more-than-7' : null ?>">
                     <?php foreach( $logos_s['logos'] as $item ): ?>
                         <div class="logo-holder">
                             <?= wp_get_attachment_image($item['logo'], 'large') ?>

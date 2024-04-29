@@ -21,18 +21,38 @@
             justify-content: center;
             margin-bottom: -20px;
 
-            .logo-holder {
-                margin: 0 clamp(15px, px-to-vw(50), 50px) 20px;
+            &.more-than-7 {
+                .logo-holder {
+                    margin: 0 clamp(15px, px-to-vw(38), 38px) 20px;
 
-                img {
-                    width: auto;
-                    max-width: 100px;
-                    max-height: 45px;
-                    height: auto;
+                    img {
+                        width: auto;
+                        max-width: 100px;
+                        max-height: 45px;
+                        height: auto;
 
-                    @media #{$tablet-l} {
-                        max-width: clamp(150px, px-to-vw(202), 202px);
-                        max-height: clamp(60px, px-to-vw(90), 90px);
+                        @media #{$tablet-l} {
+                            max-width: clamp(130px, px-to-vw(180), 180px);
+                            max-height: clamp(50px, px-to-vw(75), 75px);
+                        }
+                    }
+                }
+            }
+
+            &:not(.more-than-7) {
+                .logo-holder {
+                    margin: 0 clamp(15px, px-to-vw(50), 50px) 20px;
+
+                    img {
+                        width: auto;
+                        max-width: 100px;
+                        max-height: 45px;
+                        height: auto;
+
+                        @media #{$tablet-l} {
+                            max-width: clamp(150px, px-to-vw(202), 202px);
+                            max-height: clamp(60px, px-to-vw(90), 90px);
+                        }
                     }
                 }
             }
