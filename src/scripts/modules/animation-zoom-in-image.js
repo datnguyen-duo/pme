@@ -21,7 +21,7 @@ export default () => {
         containers.forEach(function (container, index) {
             let sectionImage = container.querySelector('img')
             let tl = gsap.timeline({defaults: {duration: 1}})
-            tl.to(sectionImage, {transform: 'scale(1.15)'})
+            tl.to(sectionImage, {transform: 'scale(1.08)'})
 
             // data-js-animation-zoom-in-image-scroller-start="value"
             let customScrollerStart = container.dataset.jsAnimationZoomInImageScrollerStart
@@ -34,7 +34,7 @@ export default () => {
                 markers: false,
                 start: "top " + scrollerStart,
                 // end: "bottom 60%",
-                scrub: 4,
+                scrub: 5,
                 invalidateOnRefresh: true,
             })
         })

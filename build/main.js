@@ -4646,7 +4646,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__
         }
       });
       tl.to(sectionImage, {
-        transform: 'scale(1.15)'
+        transform: 'scale(1.08)'
       });
 
       // data-js-animation-zoom-in-image-scroller-start="value"
@@ -4659,7 +4659,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__
         markers: false,
         start: "top " + scrollerStart,
         // end: "bottom 60%",
-        scrub: 4,
+        scrub: 5,
         invalidateOnRefresh: true
       });
     });
