@@ -2130,7 +2130,6 @@ a {
   font-family: "tiempos-headline-light", sans-serif;
   color: #3E5C6C;
   font-size: 46px;
-  margin-bottom: 10px;
 }
 @media only screen and (min-width : 768px) {
   .template-home-page-container .blocks-section .content .blocks .block-holder .block .col:nth-child(2) .block-info .block-title {
