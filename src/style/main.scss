@@ -168,12 +168,14 @@ a {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    opacity: 1;
 
     .swiper-pagination-bullet {
         width: 40px;
         height: 1px;
         border-radius: 0;
         background-color: rgba($blue, 25%);
+        opacity: 1;
 
         @media #{$tablet-l} {
             width: 54px;

@@ -29,7 +29,7 @@ get_header(); ?>
         </section>
 
         <?php $intro_s = get_field('intro_section');
-        if( $intro_s['description'] || $intro_s['button'] || $intro_s['image'] ): ?>
+        if( $intro_s['description'] || $intro_s['button'] || $intro_s['video'] ): ?>
             <section class="intro-section">
                 <div class="content">
                     <div class="col">
@@ -54,7 +54,9 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="col">
-                        <?php if( $intro_s['image'] ): ?>
+                        <?php if( $intro_s['video'] ): ?>
+                            <div class="media-holder" js-animation-parallax="container" js-html-video="container" data-video="<?= $intro_s['video']['url'] ?>" data-video-type="video/mp4"></div>
+                        <?php elseif( $intro_s['image'] ): ?>
                             <div class="media-holder" js-animation-parallax="container">
                                 <?= wp_get_attachment_image($intro_s['image'], 'large') ?>
                             </div>

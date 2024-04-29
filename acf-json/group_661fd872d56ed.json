@@ -432,8 +432,29 @@
                         },
                         {
                             "key": "field_6620c9d218bed",
-                            "label": "Description",
+                            "label": "Stat Description",
                             "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "placeholder": "",
+                            "new_lines": "br",
+                            "parent_repeater": "field_6620c9469391c"
+                        },
+                        {
+                            "key": "field_662f9f105e5c4",
+                            "label": "Hidden Description",
+                            "name": "description_2",
                             "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
@@ -1052,6 +1073,7 @@
                             "collapsed": "",
                             "button_label": "Add Detail",
                             "rows_per_page": 20,
+                            "parent_repeater": "field_662a829c4497d",
                             "sub_fields": [
                                 {
                                     "key": "field_662a833f44982",
@@ -1093,8 +1115,7 @@
                                     "first_day": 1,
                                     "parent_repeater": "field_662a832844981"
                                 }
-                            ],
-                            "parent_repeater": "field_662a829c4497d"
+                            ]
                         }
                     ]
                 }
@@ -1246,5 +1267,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714154722
+    "modified": 1714396955
 }

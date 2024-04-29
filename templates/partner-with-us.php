@@ -84,9 +84,20 @@ get_header(); ?>
                                             <span js-counter="container" data-js-counter-stop="<?= $item['stat_number'] ?>">0</span>
                                         <?php endif; ?><?= $item['stat_after_text'] ?>
                                     </div>
-                                    <div class="item-description">
-                                        <p><?= $item['description'] ?></p>
-                                    </div>
+
+                                    <?php if( $item['description'] ): ?>
+                                        <div class="item-description">
+                                            <p><?= $item['description'] ?></p>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if( $item['description_2'] ): ?>
+                                        <div class="hidden-item-description-holder">
+                                            <div class="hidden-item-description">
+                                                <p><?= $item['description_2'] ?></p>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
