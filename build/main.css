@@ -4347,54 +4347,11 @@ a {
   font-family: "tiempos-headline-light", sans-serif;
   color: #fff;
   font-size: 46px;
-  margin: auto auto 0;
+  margin: auto;
 }
 @media only screen and (min-width : 768px) {
   .template-contract-page-container .hero-section .content .group .title {
     font-size: clamp(56px, 5.7291666667vw, 110px);
-  }
-}
-@media only screen and (min-width : 768px) {
-  .template-contract-page-container .hero-section .content .group .title {
-    margin-bottom: clamp(25px, 2.34375vw, 45px);
-  }
-}
-.template-contract-page-container .hero-section .content .group .border {
-  margin-top: auto;
-  display: block;
-  height: 1px;
-  background-color: #fff;
-  margin-bottom: clamp(45px, 3.125vw, 60px);
-  max-width: 550px;
-}
-.template-contract-page-container .hero-section .content .group .list {
-  display: flex;
-  justify-content: space-between;
-}
-@media only screen and (min-width : 550px) {
-  .template-contract-page-container .hero-section .content .group .list {
-    justify-content: flex-start;
-  }
-}
-.template-contract-page-container .hero-section .content .group .list .item {
-  margin-right: 10px;
-}
-@media only screen and (min-width : 550px) {
-  .template-contract-page-container .hero-section .content .group .list .item {
-    margin-right: clamp(30px, 3.125vw, 60px);
-  }
-}
-.template-contract-page-container .hero-section .content .group .list .item .item-title {
-  font-family: "aktiv-grotesk-condensed", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-@media only screen and (min-width : 768px) {
-  .template-contract-page-container .hero-section .content .group .list .item .item-title {
-    font-size: clamp(16px, 1.0416666667vw, 20px);
   }
 }
 .template-contract-page-container .blocks-section .content .blocks .block-holder:nth-child(even) {

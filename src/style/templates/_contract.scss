@@ -51,43 +51,7 @@
 
                 .title {
                     @include title-1($color: #fff);
-                    margin: auto auto 0;
-
-                    @media #{$tablet-s} {
-                        margin-bottom: clamp(25px, px-to-vw(45), 45px);
-                    }
-                }
-
-                .border {
-                    margin-top: auto;
-                    display: block;
-                    height: 1px;
-                    background-color: #fff;
-                    margin-bottom: clamp(45px, px-to-vw(60), 60px);
-                    max-width: 550px;
-                }
-
-                .list {
-                    display: flex;
-                    //flex-wrap: wrap;
-                    justify-content: space-between;
-
-                    @media #{$mobile-xl} {
-                        justify-content: flex-start;
-                    }
-
-                    .item {
-                        margin-right: 10px;
-
-                        @media #{$mobile-xl} {
-                            margin-right: clamp(30px, px-to-vw(60), 60px);
-                        }
-
-                        .item-title {
-                            @include title-2($color: #fff);
-                            margin-bottom: 8px;
-                        }
-                    }
+                    margin: auto;
                 }
             }
         }

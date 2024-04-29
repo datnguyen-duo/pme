@@ -22,30 +22,6 @@ get_header(); ?>
                     <?php if( $title ): ?>
                         <h1 class="title"><?= $title ?></h1>
                     <?php endif; ?>
-
-                    <div class="border"></div>
-
-                    <?php if( $hero_s['list'] ): ?>
-                        <div class="list">
-                            <?php foreach( $hero_s['list'] as $item ): ?>
-                                <div class="item">
-                                    <?php if( $item['title'] ): ?>
-                                        <p class="item-title"><?= $item['title'] ?></p>
-                                    <?php endif; ?>
-
-                                    <?php $link = $item['link'];
-                                    if( $link ):
-                                        $link_url = $link['url'];
-                                        $link_title = $link['title'];
-                                        $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                        <a class="gl-link gl-link--white" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
-                                            <?= esc_html( $link_title ); ?>
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </section>
