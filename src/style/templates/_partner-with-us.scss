@@ -297,7 +297,6 @@
     }
 
     #map-sidebar {
-      border-right: 1px solid $blue;
       padding: 2rem;
       height: calc(800px - 8rem);
       @media screen and (max-width: 768px) {
@@ -349,6 +348,10 @@
           }
         }
       }
+    }
+
+    #map {
+      border-left: 1px solid $blue;
     }
 
     #map-popup {

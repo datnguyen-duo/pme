@@ -4874,7 +4874,6 @@ a {
   }
 }
 .template-partner-with-us-page-container .map #map-sidebar {
-  border-right: 1px solid #3E5C6C;
   padding: 2rem;
   height: calc(800px - 8rem);
 }
@@ -4944,6 +4943,9 @@ a {
 }
 .template-partner-with-us-page-container .map #map-sidebar .map-button-container.active button .circle-list-item {
   background-color: #ECC59B;
+}
+.template-partner-with-us-page-container .map #map {
+  border-left: 1px solid #3E5C6C;
 }
 .template-partner-with-us-page-container .map #map-popup {
   display: none;
