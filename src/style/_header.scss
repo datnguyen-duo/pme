@@ -1,524 +1,524 @@
 #site-header {
-  @include transition();
-  background-color: #f9f5f2;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: $mobile-header-height;
+    @include transition();
+    background-color: #f9f5f2;
+    position: fixed;
+    z-index: $header-z-index;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $mobile-header-height;
 
-  @media #{$header} {
-    height: $desktop-header-height;
-  }
-
-  /**
-     If header is transparent-light
-    **/
-  &.transparent-light {
-    background-color: transparent;
-
-    // Transparent light is transparent header with light/white text
-    .content {
-      .col {
-        &.col-middle {
-          .link-holder {
-            a {
-              color: #fff;
-            }
-          }
-
-          nav {
-            .menu {
-              > li {
-                &.menu-item-has-children {
-                  > a {
-                    &:after {
-                      background-image: url("/src/images/icons/chevron-down-white.svg");
-                    }
-                  }
-                }
-
-                &:hover {
-                  > a {
-                    color: $blue;
-                  }
-                }
-
-                > a {
-                  color: $tan;
-                }
-              }
-            }
-          }
-        }
-
-        &.col-right {
-          .hamburger {
-            span {
-              background-color: #fff;
-            }
-          }
-        }
-      }
+    @media #{$header} {
+        height: $desktop-header-height;
     }
 
-    &:not(.nav-is-active) {
-      &.scrolled {
-        background-color: #f9f5f2;
+    /**
+       If header is transparent-light
+      **/
+    &.transparent-light {
+        background-color: transparent;
+
+        // Transparent light is transparent header with light/white text
+        .content {
+            .col {
+                &.col-middle {
+                    .link-holder {
+                        a {
+                            color: #fff;
+                        }
+                    }
+
+                    nav {
+                        .menu {
+                            > li {
+                                &.menu-item-has-children {
+                                    > a {
+                                        &:after {
+                                            background-image: url("/src/images/icons/chevron-down-white.svg");
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    > a {
+                                        color: $blue;
+                                    }
+                                }
+
+                                > a {
+                                    color: $tan;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.col-right {
+                    .hamburger {
+                        span {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.nav-is-active) {
+            &.scrolled {
+                background-color: #f9f5f2;
+
+                .content {
+                    .col {
+                        nav {
+                            .menu {
+                                > li {
+                                    &.menu-item-has-children {
+                                        > a {
+                                            &:after {
+                                                background-image: url("/src/images/icons/chevron-down-blue.svg");
+                                            }
+                                        }
+                                    }
+
+                                    > a {
+                                        color: $blue;
+                                    }
+                                }
+                            }
+                        }
+
+                        .link-holder {
+                            a {
+                                color: $blue;
+                            }
+                        }
+
+                        .hamburger {
+                            span {
+                                background-color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // If header is transparent-dark
+    &.transparent-dark {
+        background-color: transparent;
+
+        // Transparent dark is transparent header with light/blue text
+        .content {
+            .col {
+                &.col-middle {
+                    .link-holder {
+                        a {
+                            color: $blue;
+                        }
+                    }
+
+                    nav {
+                        .menu {
+                            > li {
+                                > a {
+                                    color: $blue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.col-right {
+                    .hamburger {
+                        span {
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.nav-is-active) {
+            &.scrolled {
+                background-color: $tan;
+            }
+        }
+    }
+    /**
+       If header is transparent-light at start/page load END
+      **/
+
+    &.nav-is-active {
+        background-color: $blue;
 
         .content {
-          .col {
-            nav {
-              .menu {
-                > li {
-                  &.menu-item-has-children {
-                    > a {
-                      &:after {
-                        background-image: url("/src/images/icons/chevron-down-blue.svg");
-                      }
+            .col {
+                &.col-right {
+                    .hamburger {
+                        span {
+                            background-color: #fff;
+                        }
                     }
-                  }
-
-                  > a {
-                    color: $blue;
-                  }
                 }
-              }
             }
-
-            .link-holder {
-              a {
-                color: $blue;
-              }
-            }
-
-            .hamburger {
-              span {
-                background-color: $blue;
-              }
-            }
-          }
         }
-      }
     }
-  }
-
-  // If header is transparent-dark
-  &.transparent-dark {
-    background-color: transparent;
-
-    // Transparent dark is transparent header with light/blue text
-    .content {
-      .col {
-        &.col-middle {
-          .link-holder {
-            a {
-              color: $blue;
-            }
-          }
-
-          nav {
-            .menu {
-              > li {
-                > a {
-                  color: $blue;
-                }
-              }
-            }
-          }
-        }
-
-        &.col-right {
-          .hamburger {
-            span {
-              background-color: $blue;
-            }
-          }
-        }
-      }
-    }
-
-    &:not(.nav-is-active) {
-      &.scrolled {
-        background-color: $tan;
-      }
-    }
-  }
-  /**
-     If header is transparent-light at start/page load END
-    **/
-
-  &.nav-is-active {
-    background-color: $blue;
 
     .content {
-      .col {
-        &.col-right {
-          .hamburger {
-            span {
-              background-color: #fff;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    padding: 0 25px;
-    box-sizing: border-box;
-    max-width: 1920px;
-    margin: auto;
-
-    .col {
-      &.col-left {
-        .logo-holder {
-          width: 40px;
-          display: block;
-
-          @media #{$tablet-s} {
-            width: 53px;
-          }
-
-          img {
-            width: 100%;
-            height: auto;
-            vertical-align: bottom;
-          }
-        }
-      }
-
-      &.col-middle {
-        nav {
-          white-space: nowrap;
-          display: none;
-
-          @media #{$header} {
-            display: block;
-          }
-
-          @media #{$laptop-xl} {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          .menu {
-            display: flex;
-            align-items: center;
-
-            > li {
-              @include transition();
-              //margin: 0 17px;
-              border-radius: 5px;
-              position: relative;
-
-              &:hover {
-                background-color: #efe8e2;
-              }
-
-              &.current-menu-item {
-                > a {
-                  font-weight: 500;
-                }
-              }
-
-              &.menu-item-has-children {
-                &:hover {
-                  .sub-menu {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                    pointer-events: auto;
-                    visibility: visible;
-                  }
-
-                  > a {
-                    &:after {
-                      transform: rotate(180deg);
-                      background-image: url("/src/images/icons/chevron-down-blue.svg");
-                    }
-                  }
-                }
-
-                > a {
-                  display: flex;
-                  align-items: center;
-
-                  &:after {
-                    @include transition();
-                    content: "";
-                    display: block;
-                    width: 8px;
-                    height: 5px;
-                    background-image: url("/src/images/icons/chevron-down-blue.svg");
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    margin-left: 3px;
-                  }
-                }
-              }
-
-              > a {
-                @include transition();
-                padding: 17px 18px;
-                box-sizing: border-box;
-                font-family: "owners-text", sans-serif;
-                font-size: 14px;
-                display: block;
-                color: $blue;
-              }
-
-              .sub-menu {
-                @include transition();
-                $sub-menu-top-space: 5px;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                padding: calc(15px + $sub-menu-top-space) 20px;
-                box-sizing: border-box;
-
-                opacity: 0;
-                transform: translateY(5px) scale(0.98);
-                pointer-events: none;
-                visibility: hidden;
-
-                &:after {
-                  content: "";
-                  display: block;
-                  width: 100%;
-                  height: calc(100% - $sub-menu-top-space);
-                  position: absolute;
-                  bottom: 0;
-                  left: 0;
-                  background-color: #f9f5f2;
-                  z-index: 0;
-                  box-shadow: 0 0 10px rgba(#000, 10%);
-                  border-radius: 5px;
-                }
-
-                li {
-                  position: relative;
-                  z-index: 1;
-                  margin-bottom: 10px;
-
-                  &:last-child {
-                    margin-bottom: 0;
-                  }
-
-                  a {
-                    @include transition();
-                    font-family: "owners-text", sans-serif;
-                    font-size: 14px;
-                    color: $blue;
-                    display: flex;
-                    align-items: center;
-
-                    &:hover {
-                      text-decoration: underline;
-                    }
-
-                    .item-icon {
-                      width: 20px;
-                      display: block;
-                      margin-right: 9px;
-
-                      img {
-                        width: 100%;
-                        height: auto;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .link-holder {
-          @media #{$header} {
-            display: none;
-          }
-
-          a {
-            font-family: "owners-text", sans-serif;
-            font-size: 12px;
-            color: $blue;
-            line-height: 1.27;
-
-            @media #{$mobile-l} {
-              font-size: 14px;
-            }
-          }
-        }
-      }
-
-      &.col-right {
+        position: relative;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 25px;
+        box-sizing: border-box;
+        max-width: 1920px;
+        margin: auto;
 
-        .hamburger {
-          display: block;
-          width: 18px;
-          background-color: transparent;
-          border: none;
-          padding: 0;
+        .col {
+            &.col-left {
+                .logo-holder {
+                    width: 40px;
+                    display: block;
 
-          @media #{$header} {
-            display: none;
-          }
+                    @media #{$tablet-s} {
+                        width: 53px;
+                    }
 
-          &.active {
-            span {
-              &:nth-child(1) {
-                transform: rotate(-45deg);
-                top: 1px;
-              }
-
-              &:nth-child(2) {
-                width: 0;
-              }
-
-              &:nth-child(3) {
-                transform: rotate(45deg);
-                //top: -10px;
-              }
-            }
-          }
-
-          span {
-            @include transition(all, 300ms);
-            position: relative;
-            display: block;
-            width: 18px;
-            margin-bottom: 6px;
-            height: 1px;
-            background-color: $blue;
-            top: 0;
-
-            &:nth-child(1) {
-              transform-origin: top right;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        vertical-align: bottom;
+                    }
+                }
             }
 
-            &:nth-child(2) {
+            &.col-middle {
+                nav {
+                    white-space: nowrap;
+                    display: none;
+
+                    @media #{$header} {
+                        display: block;
+                    }
+
+                    @media #{$laptop-xl} {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .menu {
+                        display: flex;
+                        align-items: center;
+
+                        > li {
+                            @include transition();
+                            //margin: 0 17px;
+                            border-radius: 5px;
+                            position: relative;
+
+                            &:hover {
+                                background-color: #efe8e2;
+                            }
+
+                            &.current-menu-item {
+                                > a {
+                                    font-weight: 500;
+                                }
+                            }
+
+                            &.menu-item-has-children {
+                                &:hover {
+                                    .sub-menu {
+                                        opacity: 1;
+                                        transform: translateY(0) scale(1);
+                                        pointer-events: auto;
+                                        visibility: visible;
+                                    }
+
+                                    > a {
+                                        &:after {
+                                            transform: rotate(180deg);
+                                            background-image: url("/src/images/icons/chevron-down-blue.svg");
+                                        }
+                                    }
+                                }
+
+                                > a {
+                                    display: flex;
+                                    align-items: center;
+
+                                    &:after {
+                                        @include transition();
+                                        content: "";
+                                        display: block;
+                                        width: 8px;
+                                        height: 5px;
+                                        background-image: url("/src/images/icons/chevron-down-blue.svg");
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        margin-left: 3px;
+                                    }
+                                }
+                            }
+
+                            > a {
+                                @include transition();
+                                padding: 17px 18px;
+                                box-sizing: border-box;
+                                font-family: "owners-text", sans-serif;
+                                font-size: 14px;
+                                display: block;
+                                color: $blue;
+                            }
+
+                            .sub-menu {
+                                @include transition();
+                                $sub-menu-top-space: 5px;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                padding: calc(15px + $sub-menu-top-space) 20px;
+                                box-sizing: border-box;
+
+                                opacity: 0;
+                                transform: translateY(5px) scale(0.98);
+                                pointer-events: none;
+                                visibility: hidden;
+
+                                &:after {
+                                    content: "";
+                                    display: block;
+                                    width: 100%;
+                                    height: calc(100% - $sub-menu-top-space);
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: #f9f5f2;
+                                    z-index: 0;
+                                    box-shadow: 0 0 10px rgba(#000, 10%);
+                                    border-radius: 5px;
+                                }
+
+                                li {
+                                    position: relative;
+                                    z-index: 1;
+                                    margin-bottom: 10px;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+
+                                    a {
+                                        @include transition();
+                                        font-family: "owners-text", sans-serif;
+                                        font-size: 14px;
+                                        color: $blue;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+
+                                        .item-icon {
+                                            width: 20px;
+                                            display: block;
+                                            margin-right: 9px;
+
+                                            img {
+                                                width: 100%;
+                                                height: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .link-holder {
+                    @media #{$header} {
+                        display: none;
+                    }
+
+                    a {
+                        font-family: "owners-text", sans-serif;
+                        font-size: 12px;
+                        color: $blue;
+                        line-height: 1.27;
+
+                        @media #{$mobile-l} {
+                            font-size: 14px;
+                        }
+                    }
+                }
             }
 
-            &:nth-child(3) {
-              transform-origin: bottom right;
-              margin-bottom: 0;
+            &.col-right {
+                display: flex;
+                align-items: center;
+
+                .hamburger {
+                    display: block;
+                    width: 18px;
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+
+                    @media #{$header} {
+                        display: none;
+                    }
+
+                    &.active {
+                        span {
+                            &:nth-child(1) {
+                                transform: rotate(-45deg);
+                                top: 1px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 0;
+                            }
+
+                            &:nth-child(3) {
+                                transform: rotate(45deg);
+                                //top: -10px;
+                            }
+                        }
+                    }
+
+                    span {
+                        @include transition(all, 300ms);
+                        position: relative;
+                        display: block;
+                        width: 18px;
+                        margin-bottom: 6px;
+                        height: 1px;
+                        background-color: $blue;
+                        top: 0;
+
+                        &:nth-child(1) {
+                            transform-origin: top right;
+                        }
+
+                        &:nth-child(2) {
+                        }
+
+                        &:nth-child(3) {
+                            transform-origin: bottom right;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .button-holder {
+                    margin-left: 10px;
+                    display: none;
+
+                    @media #{$header} {
+                        display: block;
+                    }
+                }
             }
-          }
         }
-
-        .button-holder {
-          margin-left: 10px;
-          display: none;
-
-          @media #{$header} {
-            display: block;
-          }
-        }
-      }
     }
-  }
 }
 
 // Mobile Nav
 #site-mobile-nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background-color: $blue;
-
-  @media #{$header} {
-    display: none !important;
-  }
-
-  .content {
-    padding: 120px px-to-vw(30, 430) px-to-vw(50, 430);
-    box-sizing: border-box;
-    overflow: auto;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    z-index: calc($header-z-index - 1);
+    background-color: $blue;
 
-    .menu {
-      > li {
-        margin-bottom: 10px;
-        position: relative;
-
-        &.menu-item-has-children {
-          //display: flex;
-
-          &.active {
-            > a {
-              &:after {
-                transform: rotate(180deg);
-              }
-            }
-          }
-
-          > a {
-            display: flex;
-            align-items: flex-end;
-
-            &:after {
-              @include transition();
-              content: "";
-              background-image: url("/src/images/icons/arrow-down-white.svg");
-              background-repeat: no-repeat;
-              background-size: contain;
-              display: block;
-              width: 16px;
-              height: 16px;
-              margin-left: 12px;
-              margin-bottom: 8px;
-            }
-          }
-        }
-
-        > a {
-          @include title-1-1($color: $tan);
-        }
-
-        > .sub-menu {
-          margin-top: 22px;
-          display: none;
-
-          > li {
-            &:last-child {
-              > a {
-                margin-bottom: 0;
-              }
-            }
-
-            > a {
-              @include title-2($color: $tan);
-              padding-bottom: 15px;
-              border-bottom: solid 1px rgba(#fff, 25%);
-              box-sizing: border-box;
-              display: block;
-              margin-bottom: 15px;
-
-              .item-icon {
-                display: none;
-              }
-            }
-
-            .sub-menu {
-              display: none;
-            }
-          }
-        }
-      }
+    @media #{$header} {
+        display: none !important;
     }
-  }
+
+    .content {
+        padding: 120px px-to-vw(30, 430) px-to-vw(50, 430);
+        box-sizing: border-box;
+        overflow: auto;
+        height: 100%;
+
+        .menu {
+            > li {
+                margin-bottom: 10px;
+                position: relative;
+
+                &.menu-item-has-children {
+                    //display: flex;
+
+                    &.active {
+                        > a {
+                            &:after {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    > a {
+                        display: flex;
+                        align-items: flex-end;
+
+                        &:after {
+                            @include transition();
+                            content: "";
+                            background-image: url("/src/images/icons/arrow-down-white.svg");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            display: block;
+                            width: 16px;
+                            height: 16px;
+                            margin-left: 12px;
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+
+                > a {
+                    @include title-1-1($color: $tan);
+                }
+
+                > .sub-menu {
+                    margin-top: 22px;
+                    display: none;
+
+                    > li {
+                        &:last-child {
+                            > a {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        > a {
+                            @include title-2($color: $tan);
+                            padding-bottom: 15px;
+                            border-bottom: solid 1px rgba(#fff, 25%);
+                            box-sizing: border-box;
+                            display: block;
+                            margin-bottom: 15px;
+
+                            .item-icon {
+                                display: none;
+                            }
+                        }
+
+                        .sub-menu {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -313,6 +313,8 @@
     .map {
         height: 800px;
         border-top: 1px solid $blue;
+        position: relative;
+        z-index: 1;
 
         @media screen and (max-width: 768px) {
             height: auto;

@@ -446,7 +446,7 @@ a {
   transition: all 350ms ease 0ms;
   background-color: #f9f5f2;
   position: fixed;
-  z-index: 9999;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -737,7 +737,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 9;
   background-color: #3E5C6C;
 }
 @media only screen and (min-width : 1190px) {
@@ -4879,6 +4879,8 @@ a {
 .template-partner-with-us-page-container .map {
   height: 800px;
   border-top: 1px solid #3E5C6C;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .template-partner-with-us-page-container .map {
