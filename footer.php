@@ -29,7 +29,7 @@ $copyright = get_field('copyright', 'option');
                         <?php if( $form_title || $form_shortcode ): ?>
                             <div class="form-container">
                                 <?php if( $form_title ): ?>
-                                    <div class="form-title"><?= $form_title ?></div>
+                                    <div class="form-title" js-animation="fade-up"><?= $form_title ?></div>
                                 <?php endif; ?>
 
                                 <?php if( $form_shortcode ): ?>

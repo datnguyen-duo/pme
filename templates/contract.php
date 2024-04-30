@@ -18,7 +18,7 @@ get_header(); ?>
                     $title = $hero_s['title'];
                 } ?>
 
-                <div class="group">
+                <div class="group" js-animation="fade-up">
                     <?php if( $title ): ?>
                         <h1 class="title"><?= $title ?></h1>
                     <?php endif; ?>
@@ -35,7 +35,7 @@ get_header(); ?>
                             <div class="block-holder">
                                 <div class="block">
                                     <div class="block-col">
-                                        <div class="block-col-content">
+                                        <div class="block-col-content" js-animation="fade-up">
                                             <?php if( $block['title'] ): ?>
                                                 <h2 class="block-title"><?= $block['title'] ?></h2>
                                             <?php endif; ?>

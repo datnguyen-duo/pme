@@ -21,7 +21,6 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "aos": "^2.3.4",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "swiper": "^10.3.1"

@@ -1,0 +1,13 @@
+[js-animation="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    position: relative;
+    z-index: 2;
+}
+
+[js-animation="fade-down"] {
+    opacity: 0;
+    transform: translateY(-50px);
+    position: relative;
+    z-index: 2;
+}

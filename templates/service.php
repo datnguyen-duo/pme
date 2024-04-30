@@ -18,7 +18,7 @@ get_header(); ?>
                     $title = $hero_s['title'];
                 } ?>
 
-                <div class="group">
+                <div class="group" js-animation="fade-up">
                     <p class="title">Services</p>
 
                     <?php if( $title ): ?>
@@ -33,7 +33,7 @@ get_header(); ?>
             <section class="intro-section">
                 <div class="content">
                     <div class="col">
-                        <div class="col-content">
+                        <div class="col-content" js-animation="fade-up">
                             <?php if( $intro_s['description'] ): ?>
                                 <div class="description">
                                     <p><?= $intro_s['description'] ?></p>
@@ -71,7 +71,7 @@ get_header(); ?>
             <section class="list-section">
                 <div class="content">
                     <?php if( $list['title'] ): ?>
-                        <h2 class="title"><?= $list['title'] ?></h2>
+                        <h2 class="title" js-animation="fade-up"><?= $list['title'] ?></h2>
                     <?php endif; ?>
 
                     <?php if( $list['list'] ): ?>
@@ -136,7 +136,7 @@ get_header(); ?>
                     <div class="cols">
                         <div class="col">
                             <?php if( $description_s['title'] ): ?>
-                                <h2 class="title"><?= $description_s['title'] ?></h2>
+                                <h2 class="title" js-animation="fade-up"><?= $description_s['title'] ?></h2>
                             <?php endif; ?>
 
                             <?php if( $description_s['image'] ): ?>

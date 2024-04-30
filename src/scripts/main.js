@@ -1,16 +1,4 @@
 import "/src/style/main.scss";
-import AOS from "aos";
-
-$(document).ready(function () {
-  setTimeout(() => {
-    AOS.init({
-      offset: 150,
-      duration: 1000,
-      delay: 150,
-      once: true,
-    });
-  }, 120);
-});
 
 // Other
 // import "./helpers"
@@ -48,6 +36,9 @@ AnimationMoveLeftRight().init();
 
 import AnimationMoveZoomInImage from "./modules/animation-zoom-in-image";
 AnimationMoveZoomInImage().init();
+
+import Animation from "./modules/animation";
+Animation().init();
 
 import Counter from "./modules/counter";
 Counter().init();

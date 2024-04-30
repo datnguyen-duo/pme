@@ -9,7 +9,7 @@
                     </div>
                 <?php endif; ?>
 
-                <div class="group">
+                <div class="group" js-animation="fade-up">
                     <h1 class="title">
                         <span class="part"><?= $hero_s['title_part_1'] ?></span>
                         <span class="part">
@@ -55,7 +55,7 @@
                         <?php endif; ?>
                     </div>
                     <div class="col">
-                        <div class="group" data-aos-easing="ease-out" data-aos="fade-up">
+                        <div class="group" js-animation="fade-up">
                             <?php if( $intro_s['title'] ): ?>
                                 <h2 class="title"><?= $intro_s['title'] ?></h2>
                             <?php endif; ?>
@@ -96,7 +96,7 @@
             <section class="list-2-section" js-list-slider="container">
                 <div class="content">
                     <?php if( $list_section['title'] ): ?>
-                        <h2 class="title"><?= $list_section['title'] ?></h2>
+                        <h2 class="title" js-animation="fade-up"><?= $list_section['title'] ?></h2>
                     <?php endif; ?>
 
                     <?php if( $list_section['list'] ): ?>
@@ -150,7 +150,7 @@
                 <div class="content">
                     <div class="col">
                         <?php if( $blocks_s['title'] ): ?>
-                            <h2 class="title"><?= $blocks_s['title'] ?></h2>
+                            <h2 class="title" js-animation="fade-up"><?= $blocks_s['title'] ?></h2>
                         <?php endif; ?>
                     </div>
 
@@ -227,7 +227,7 @@
             <section class="testimonials-section" js-testimonial-slider="container">
                 <div class="content">
                     <?php if( $slider_s['title'] ): ?>
-                        <h2 class="title"><?= $slider_s['title']  ?></h2>
+                        <h2 class="title" js-animation="fade-up"><?= $slider_s['title'] ?></h2>
                     <?php endif; ?>
 
                     <?php if( $slider_s['slider'] ): ?>
@@ -281,22 +281,24 @@
                 <div class="content">
                     <div class="cols">
                         <div class="col">
-                            <?php if( $description_s['title'] ): ?>
-                                <h2 class="title"><?= $description_s['title'] ?></h2>
-                            <?php endif; ?>
+                            <div js-animation="fade-up">
+                                <?php if( $description_s['title'] ): ?>
+                                    <h2 class="title"><?= $description_s['title'] ?></h2>
+                                <?php endif; ?>
 
-                            <?php
-                            $link = $description_s['button'];
-                            if( $link ):
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                <div class="button-holder">
-                                    <a class="gl-button gl-button--orange" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
-                                        <?= esc_html( $link_title ); ?>
-                                    </a>
-                                </div>
-                            <?php endif; ?>
+                                <?php
+                                $link = $description_s['button'];
+                                if( $link ):
+                                    $link_url = $link['url'];
+                                    $link_title = $link['title'];
+                                    $link_target = $link['target'] ? $link['target'] : '_self'; ?>
+                                    <div class="button-holder">
+                                        <a class="gl-button gl-button--orange" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
+                                            <?= esc_html( $link_title ); ?>
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
 
                             <?php if( $description_s['image'] ): ?>
                                 <div class="media-holder">

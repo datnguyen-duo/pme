@@ -11,7 +11,7 @@
 
         <div class="content">
             <?php if( $hero_s['title'] ): ?>
-                <div class="group">
+                <div class="group" js-animation="fade-up">
                     <?php if( $hero_s['title'] ): ?>
                         <h1 class="title"><?= $hero_s['title'] ?></h1>
                     <?php endif; ?>
@@ -31,7 +31,7 @@
         <section class="intro-section">
             <div class="content">
                 <div class="col">
-                    <div class="col-content">
+                    <div class="col-content" js-animation="fade-up">
                         <?php if( $intro_s['description'] ): ?>
                             <div class="description">
                                 <p><?= $intro_s['description'] ?></p>
@@ -64,7 +64,7 @@
     if( $gallery_s['title'] || $gallery_s['description'] || $gallery_s['button'] || $gallery_s['gallery'] ): ?>
         <section class="gallery-section">
             <div class="content">
-                <div class="header">
+                <div class="header" js-animation="fade-up">
                     <?php if( $gallery_s['title'] ): ?>
                         <h2 class="title"><?= $gallery_s['title'] ?></h2>
                     <?php endif; ?>
@@ -154,7 +154,7 @@
             <div class="content">
                 <div class="col">
                     <?php if( $desc_s['title'] ): ?>
-                        <h2 class="title"><?= $desc_s['title'] ?></h2>
+                        <h2 class="title" js-animation="fade-up"><?= $desc_s['title'] ?></h2>
                     <?php endif; ?>
                 </div>
                 <div class="col">
@@ -172,28 +172,30 @@
         <section class="two-col-section">
             <div class="content">
                 <div class="col">
-                    <?php if( $desc_s['title'] ): ?>
-                        <h2 class="title"><?= $desc_s['title'] ?></h2>
-                    <?php endif; ?>
+                    <div js-animation="fade-up">
+                        <?php if( $desc_s['title'] ): ?>
+                            <h2 class="title"><?= $desc_s['title'] ?></h2>
+                        <?php endif; ?>
 
-                    <?php if( $desc_s['description'] ): ?>
-                        <div class="description">
-                            <p><?= $desc_s['description'] ?></p>
-                        </div>
-                    <?php endif; ?>
+                        <?php if( $desc_s['description'] ): ?>
+                            <div class="description">
+                                <p><?= $desc_s['description'] ?></p>
+                            </div>
+                        <?php endif; ?>
 
-                    <?php
-                    $link = $desc_s['button'];
-                    if( $link ):
-                        $link_url = $link['url'];
-                        $link_title = $link['title'];
-                        $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                        <div class="button-holder">
-                            <a class="gl-button" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
-                                <?= esc_html( $link_title ); ?>
-                            </a>
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $link = $desc_s['button'];
+                        if( $link ):
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self'; ?>
+                            <div class="button-holder">
+                                <a class="gl-button" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
+                                    <?= esc_html( $link_title ); ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
                 <div class="col">
                     <?php if( $desc_s['image'] ): ?>

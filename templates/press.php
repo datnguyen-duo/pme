@@ -5,7 +5,7 @@ get_header(); ?>
     <?php $post_section = get_field('post_section'); ?>
     <section class="featured-block-section">
         <div class="content">
-            <h1 class="title"><?php the_title() ?></h1>
+            <h1 class="title" js-animation="fade-up"><?php the_title() ?></h1>
 
             <div class="block">
                 <div class="block-col">
@@ -46,7 +46,7 @@ get_header(); ?>
         <section class="blocks-section">
             <div class="content">
                 <?php if( $posts_section['title'] ): ?>
-                    <h2 class="title"><?= $posts_section['title'] ?></h2>
+                    <h2 class="title" js-animation="fade-up"><?= $posts_section['title'] ?></h2>
                 <?php endif; ?>
 
                 <?php if( $posts_section['posts'] ): ?>

@@ -373,7 +373,7 @@ a {
 @import "reset";
 
 // Other
-//@import "animations";
+@import "animations";
 
 // Header & Footer
 @import "header";
@@ -401,6 +401,5 @@ a {
 @import "templates/service";
 
 // Node Modules
-@import 'aos/dist/aos.css';
 @import "node_modules/swiper/swiper-bundle.min";
 @import "node_modules/@splidejs/splide/dist/css/splide.min";

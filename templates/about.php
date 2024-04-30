@@ -9,7 +9,7 @@
                     <?= wp_get_attachment_image($hero_s['image_1'], 'large') ?>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" js-animation="fade-up">
                 <?php if( $hero_s['title'] ): ?>
                     <h1 class="title"><?= $hero_s['title'] ?></h1>
                 <?php endif; ?>
@@ -48,7 +48,7 @@
             <div class="content">
                 <div class="col">
                     <?php if( $description_s['title'] ): ?>
-                        <h2 class="title"><?= $description_s['title'] ?></h2>
+                        <h2 class="title" js-animation="fade-up"><?= $description_s['title'] ?></h2>
                     <?php endif; ?>
                 </div>
                 <div class="col">
@@ -120,13 +120,15 @@
     <section class="history-section" js-history-slider="container">
         <div class="content">
             <div class="header">
-                <?php if( $history_section['title'] ): ?>
-                    <h2 class="title"><?= $history_section['title'] ?></h2>
-                <?php endif; ?>
+                <div js-animation="fade-up">
+                    <?php if( $history_section['title'] ): ?>
+                        <h2 class="title"><?= $history_section['title'] ?></h2>
+                    <?php endif; ?>
 
-                <?php if( $history_section['subtitle'] ): ?>
-                    <h3 class="sub-title"><?= $history_section['subtitle'] ?></h3>
-                <?php endif; ?>
+                    <?php if( $history_section['subtitle'] ): ?>
+                        <h3 class="sub-title"><?= $history_section['subtitle'] ?></h3>
+                    <?php endif; ?>
+                </div>
 
                 <?php if( $history_section['image'] ): ?>
                     <div class="background" js-animation-zoom-in-image="container">
@@ -183,7 +185,7 @@
             <div class="content">
                 <div class="col">
                     <?php if( $members_s['title'] ): ?>
-                        <h2 class="title"><?= $members_s['title'] ?></h2>
+                        <h2 class="title" js-animation="fade-up"><?= $members_s['title'] ?></h2>
                     <?php endif; ?>
                 </div>
 
@@ -254,7 +256,7 @@
             <div class="content">
                 <?php if( $description_s['title'] ): ?>
                     <div class="header">
-                        <div class="title"><?= $description_s['title'] ?></div>
+                        <div class="title" js-animation="fade-up"><?= $description_s['title'] ?></div>
                     </div>
                 <?php endif; ?>
 

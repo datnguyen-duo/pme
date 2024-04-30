@@ -5,7 +5,7 @@ if( $logos_s['title'] || $logos_s['logos'] ): ?>
     <section class="template-part-logos">
         <div class="content">
             <?php if( $logos_s['title'] ): ?>
-                <h2 class="title"><?= $logos_s['title'] ?></h2>
+                <h2 class="title" js-animation="fade-up"><?= $logos_s['title'] ?></h2>
             <?php endif; ?>
 
             <?php if( $logos_s['logos'] ): ?>

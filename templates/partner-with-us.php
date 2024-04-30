@@ -18,7 +18,7 @@ get_header(); ?>
                 $title = $hero_s['title'];
             } ?>
 
-            <div class="group">
+            <div class="group" js-animation="fade-up">
                 <?php if( $title ): ?>
                     <h1 class="title"><?= $title ?></h1>
                 <?php endif; ?>
@@ -37,22 +37,24 @@ get_header(); ?>
         <section class="intro-section">
             <div class="content">
                 <div class="col">
-                    <?php if( $intro_s['title'] ): ?>
-                        <h2 class="title"><?= $intro_s['title'] ?></h2>
-                    <?php endif; ?>
+                    <div js-animation="fade-up">
+                        <?php if( $intro_s['title'] ): ?>
+                            <h2 class="title"><?= $intro_s['title'] ?></h2>
+                        <?php endif; ?>
 
-                    <?php
-                    $link =$intro_s['button'];
-                    if( $link ):
-                        $link_url = $link['url'];
-                        $link_title = $link['title'];
-                        $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                        <div class="button-holder">
-                            <a class="gl-button gl-button--orange" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
-                                <?= esc_html( $link_title ); ?>
-                            </a>
-                        </div>
-                    <?php endif; ?>
+                        <?php
+                        $link =$intro_s['button'];
+                        if( $link ):
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self'; ?>
+                            <div class="button-holder">
+                                <a class="gl-button gl-button--orange" href="<?= esc_url( $link_url ); ?>" target="<?= esc_attr( $link_target ); ?>">
+                                    <?= esc_html( $link_title ); ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
                 <div class="col">
                     <?php get_template_part('template-parts/accordions', '', array(
@@ -68,7 +70,7 @@ get_header(); ?>
         <section class="grid-section">
             <div class="content">
                 <?php if( $blocks_s['title'] ): ?>
-                    <h2 class="title"><?= $blocks_s['title'] ?></h2>
+                    <h2 class="title" js-animation="fade-up"><?= $blocks_s['title'] ?></h2>
                 <?php endif; ?>
 
                 <?php if( $blocks_s['blocks'] ):  ?>
@@ -144,7 +146,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="col-content">
+                    <div class="col-content" js-animation="fade-up">
                         <?php if( $desc_s['title'] ): ?>
                             <h2 class="title"><?= $desc_s['title'] ?></h2>
                         <?php endif; ?>
