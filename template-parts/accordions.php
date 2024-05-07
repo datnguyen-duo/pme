@@ -1,8 +1,9 @@
 <?php
+$id = @$args['id'];
 $autoplay = @$args['autoplay'] ? boolval($args['autoplay']) : false;
 $accordions = @$args['accordions'];
 if( $accordions ): ?>
-    <div class="template-part-accordions <?= ($autoplay) ? ' autoplay-accordions' : null ?>" js-accordions="container" <?php if( $autoplay ): ?> data-js-accordions-autoplay="true" <?php endif; ?>>
+    <div id="<?= $id ?>" class="template-part-accordions <?= ($autoplay) ? ' autoplay-accordions' : null ?>" js-accordions="container" <?php if( $autoplay ): ?> data-js-accordions-autoplay="true" <?php endif; ?>>
         <?php foreach($accordions as $index => $accordion): ?>
             <div class="accordion <?= ( $index == 0 ) ? ' active' : null ?>" js-accordions="accordion">
                 <div class="accordion-header <?= ( $index == 0 ) ? ' active' : null ?>" js-accordions="opener">

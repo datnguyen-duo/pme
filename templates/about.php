@@ -263,17 +263,18 @@
                 <div class="cols">
                     <div class="col">
                         <?php get_template_part('template-parts/accordions', '', array(
+                            'id' => 'accordions-1',
                             'autoplay' => true,
                             'accordions' => $description_s['accordions']
                         )); ?>
                     </div>
                     <div class="col">
                         <div class="col-content">
-                            <?php if( $description_s['slider'] ): ?>
-                                <div class="slider" js-slider="container">
+                            <?php if( $description_s['accordions'] ): ?>
+                                <div class="slider" js-slider="container" data-js-slider-accordions="#accordions-1">
                                     <div class="swiper" js-slider="slider">
                                         <div class="swiper-wrapper">
-                                            <?php foreach( $description_s['slider'] as $item ): ?>
+                                            <?php foreach( $description_s['accordions'] as $item ): ?>
                                                 <div class="swiper-slide">
                                                     <div class="media-holder">
                                                         <?= wp_get_attachment_image($item['image'], 'large') ?>

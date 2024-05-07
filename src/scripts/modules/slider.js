@@ -40,8 +40,45 @@ export default () => {
                 navigation: {
                     nextEl: container.querySelector(nodeSelectors.next),
                     prevEl: container.querySelector(nodeSelectors.prev),
+                },
+                on: {
+                    slideChange: function (slide) {
+                        /**
+                         * Accordions remote control
+                         * Control accordions remotely with slider
+                         * Slider container must have data-js-slider-accordions="accordion-element-id-or-class"
+                         **/
+                        let accordions = $(container).data('js-slider-accordions')
+
+                        if( accordions ){
+                            let nextAccordionOpener = $(accordions).find('.accordion-header').eq(slide.activeIndex)
+
+                            setTimeout(function () {
+                                if( !nextAccordionOpener.hasClass('active') ) {
+                                    nextAccordionOpener.trigger('click')
+                                }
+                            }, 50)
+                        }
+                        /**
+                         * Accordions remote control END
+                         **/
+                    }
                 }
             });
+
+            /**
+             * Accordions remote control
+             * Control slider remotely with accordions
+             * Slider container must have data-js-slider-accordions="accordion-element-id-or-class"
+             **/
+            let accordions = $(container).data('js-slider-accordions')
+
+            $(accordions).find('.accordion-header').on('click', function () {
+                slider.slideTo($(this).parent().index())
+            })
+            /**
+             * Accordions remote control END
+             **/
         })
     }
 
